@@ -3,8 +3,8 @@ const { collection, getDocs, addDoc } = require('firebase/firestore');
 const express = require('express');
 const db = require('./config');
 const cors = require('cors');
-app.use(cors());
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 app.post('/', async(req, res) => {
     const protocol = req.protocol;
@@ -51,6 +51,6 @@ app.get('/',async(req,res)=>{
     res.redirect(urlFinal);
    
 })
-app.listen(process.env.PORT || 3000, (err, res) => {
+app.listen(process.env.PORT || 5000, (err, res) => {
     console.log("server started");
 })
