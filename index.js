@@ -49,6 +49,6 @@ app.get('/',async(req,res)=>{
     res.redirect(urlFinal);
    
 })
-app.listen(500, (err, res) => {
+app.listen(process.env.PORT || 3000, (err, res) => {
     console.log("server started");
 })
