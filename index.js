@@ -2,6 +2,8 @@ const bodyParser = require('body-parser');
 const { collection, getDocs, addDoc } = require('firebase/firestore');
 const express = require('express');
 const db = require('./config');
+const cors = require('cors');
+app.use(cors());
 const app = express();
 app.use(bodyParser.json());
 app.post('/', async(req, res) => {
